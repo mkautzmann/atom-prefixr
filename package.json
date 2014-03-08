@@ -1,0 +1,17 @@
+{
+  "name": "atom-prefixr",
+  "version": "0.0.1",
+  "main": "./lib/prefixr",
+  "description": "Runs CSS through the Prefixr API",
+  "repository": "https://github.com/victorgama/atom-prefixr.git",
+  "license": "MIT",
+  "engines": {
+    "atom": "*"
+  },
+  "author": "Victor Gama <hey@vito.io>",
+  "bugs": {
+    "url": "https://github.com/victorgama/atom-prefixr/issues"
+  },
+  "homepage": "https://github.com/victorgama/atom-prefixr",
+  "private": true
+}

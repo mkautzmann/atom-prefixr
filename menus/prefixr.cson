@@ -1,0 +1,14 @@
+'menu': [
+  {
+    'label': 'Selection'
+    'submenu': [
+      { 'label': 'Run Prefixr', 'command': 'prefixr:run' }
+    ]
+  },
+  {
+    'label': 'Edit'
+    'submenu': [
+      { 'label': 'Run Prefixr', 'command': 'prefixr:run' }
+    ]
+  }
+]

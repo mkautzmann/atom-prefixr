@@ -1,0 +1,2 @@
+'.platform-darwin':
+  'ctrl-cmd-x': 'prefixr:run'
