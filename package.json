@@ -1,6 +1,6 @@
 {
   "name": "atom-prefixr",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "main": "./lib/prefixr",
   "description": "Runs CSS through the Prefixr API",
   "repository": "https://github.com/victorgama/atom-prefixr.git",
