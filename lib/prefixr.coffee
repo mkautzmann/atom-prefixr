@@ -16,7 +16,7 @@ module.exports =
 
     isWholeBuffer = editor.getSelectedText().length is 0
     selectedText = editor.getSelectedText() or editor.getText();
-    
+
     data = querystring.stringify
       css: selectedText
 
@@ -33,10 +33,18 @@ module.exports =
     req = http.request httpOptions, (res) ->
       res.setEncoding('utf-8')
       res.on 'data', (result) ->
-        if isWholeBuffer
-          editor.setText(result)
+        result = JSON.parse(result)
+        if result.status is 'success'
+          if isWholeBuffer
+            editor.setText(result.result)
+          else
+            editor.setTextInBufferRange(editor.getSelectedBufferRange(), result.result)
         else
-          editor.setTextInBufferRange(editor.getSelectedBufferRange(), result)
+          atom.confirm
+            message: 'Your CSS could not be prefixd.'
+            detailedMessage: error.result
+            buttons:
+              OK: null
 
       res.on 'error', (error) ->
         atom.confirm
