@@ -15,7 +15,7 @@ module.exports =
     return unless grammar is "CSS" or grammar is "SCSS"
 
     isWholeBuffer = editor.getSelectedText().length is 0
-    selectedText = editor.getSelectedText() or editor.getText();
+    selectedText = editor.getSelectedText() or editor.getText()
 
     data = querystring.stringify
       css: selectedText
